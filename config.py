@@ -38,11 +38,14 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_PIC = os.environ.get("START_PIC","")
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first} , Thanks for using me :D @foxylinkk ⚡️.")
 try:
-    ADMINS=[]
-    for x in (os.environ.get("ADMINS", "6376328008‎").split()):
-        ADMINS.append(int(x))
+    ADMINS = []
+    raw_admins = os.environ.get("ADMINS", "6376328008‎")
+    print(f"Raw ADMINS value: {raw_admins}")  # Debugging
+    for x in raw_admins.split():
+        sanitized = x.strip().replace("\u200e", "")  # Remove unwanted characters
+        ADMINS.append(int(sanitized))
 except ValueError:
-        raise Exception("Your Admins list does not contain valid integers.")
+    raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", " Hello {first}!\nPlease also Join our backup channel @foxylinkk")
