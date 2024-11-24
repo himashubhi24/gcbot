@@ -39,7 +39,7 @@ START_PIC = os.environ.get("START_PIC","")
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first} , Thanks for using me :D @foxylinkk ⚡️.")
 try:
     ADMINS = []
-    raw_admins = os.environ.get("ADMINS", "6376328008‎")
+    raw_admins = os.environ.get("ADMINS", "6810248021‎")
     print(f"Raw ADMINS value: {raw_admins}")  # Debugging
     for x in raw_admins.split():
         sanitized = x.strip().replace("\u200e", "")  # Remove unwanted characters
@@ -58,8 +58,8 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" el
 
 # Auto delete time in seconds.
 AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", "600"))
-AUTO_DELETE_MSG = os.environ.get("AUTO_DELETE_MSG", "This file will be automatically deleted in {time} seconds. Please ensure you have saved any necessary content before this time.")
-AUTO_DEL_SUCCESS_MSG = os.environ.get("AUTO_DEL_SUCCESS_MSG", "Your file has been successfully deleted. Thank you for using our service. ✅")
+AUTO_DELETE_MSG = os.environ.get("AUTO_DELETE_MSG", "by @foxylinkk.")
+AUTO_DEL_SUCCESS_MSG = os.environ.get("AUTO_DEL_SUCCESS_MSG", "for premium paid channel dm @primextg. ✅")
 
 #Set true if you want Disable your Channel Posts Share button
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
