@@ -13,6 +13,7 @@ from helper_func import subscribed,decode, get_messages, delete_file
 from database.database import add_user, del_user, full_userbase, present_user
 
 
+botlink = f"https kesath yaha link dalna "
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
     id = message.from_user.id
@@ -145,14 +146,18 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 
 #=====================================================================================##
 
-
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton(
                 "Join Channel",
-                url = client.invitelink)
+                url=client.invitelink
+          ),
+            InlineKeyboardButton(
+                "Join Channel",
+                url="https://t.me/+rvOY5cCROhdmZDZk")'
+            )
         ]
     ]
     try:
