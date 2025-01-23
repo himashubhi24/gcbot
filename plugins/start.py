@@ -156,7 +156,7 @@ async def not_joined(client: Client, message: Message):
           ),
             InlineKeyboardButton(
                 "Join Channel",
-                url="https://t.me/Okgoodbrabot?start=1iS9twFn"
+                url="https://m.indiamart.com/proddetail/2850831891012.html?utm_source=rottenf7933&utm_medium=affiliate&utm_campaign=0125&utm_content=2"
             )
         ]
     ]
